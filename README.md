@@ -54,7 +54,7 @@ To build for the web:
 
 ```sh
 cd Gui_Balls_Physics
-emcc -O0 -msimd128 -mavx2 -std=gnu17 -Isrc -D_WEB -sINITIAL_MEMORY=169082880 src/*.c -o build/index.html -sUSE_SDL=0
+emcc -O0 -msimd128 -mavx2 -std=gnu17 -Wall -Wno-unused -Wshadow -Werror -Isrc -D_WEB -sINITIAL_MEMORY=169082880 src/*.c -o build/index.html -sUSE_SDL=0
 # Serve the output using a local web server (emrun)
 emrun --no_browser --port 8080 build/
 ```
